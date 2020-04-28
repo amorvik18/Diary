@@ -26,6 +26,18 @@ namespace Diary
             }
 
             avg = sum / ratings.Count();
+
+            return avg;
+        }
+
+        public float GiveMaxRating()
+        {
+            return ratings.Max();
+        }
+
+        public float GiveMinRating()
+        {
+            return ratings.Min();
         }
     }
 }
