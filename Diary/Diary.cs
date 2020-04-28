@@ -7,5 +7,13 @@ namespace Diary
 {
     class Diary
     {
+        // stan (zmienne - pola)
+        List<float> ratings;
+
+        // zachowania
+        public void AddRating(float rating)
+        {
+            ratings.Add(rating);
+        }
     }
 }
