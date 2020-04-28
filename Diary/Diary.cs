@@ -15,5 +15,17 @@ namespace Diary
         {
             ratings.Add(rating);
         }
+
+        public float CalculateAverage()
+        {
+            float sum = 0, avg = 0;
+
+            foreach (var rating in ratings)
+            {
+                sum += rating;
+            }
+
+            avg = sum / ratings.Count();
+        }
     }
 }
