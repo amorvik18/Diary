@@ -10,6 +10,8 @@ namespace Diary
     {
         static void Main(string[] args)
         {
+          
         }
     }
+
 }
