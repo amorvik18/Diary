@@ -36,7 +36,7 @@ namespace Diary
 
             stats.AverageGrade = sum / ratings.Count();
             stats.MaxGrade = ratings.Max();
-            stats.MaxGrade = ratings.Min();
+            stats.MinGrade = ratings.Min();
             
 
             return stats; 

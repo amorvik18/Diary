@@ -16,6 +16,10 @@ namespace Diary
 
             DiaryStatistic stats = diary.ComputeStatistics();
 
+            Console.WriteLine("Średnia ocena: {0}", stats.AverageGrade);
+            Console.WriteLine("Najwyższa ocena: {0}", stats.MaxGrade);
+            Console.WriteLine("Najniższa ocena: {0}", stats.MinGrade);
+
             /*for (; ;)
             {
                 Console.WriteLine("Podaj ocenę z zakresu 1 - 10");
