@@ -19,29 +19,28 @@ namespace Diary
         {
             ratings.Add(rating);
         }
-
-        public float CalculateAverage()
+        /// <summary>
+        /// Oblicza wszystkie statystki.
+        /// </summary>
+        /// <returns></returns>
+        internal DiaryStatistic ComputeStatistics()
         {
-            float sum = 0, avg = 0;
+            DiaryStatistic stats = new DiaryStatistic();
+
+            float sum = 0f;
 
             foreach (var rating in ratings)
             {
                 sum += rating;
             }
 
-            avg = sum / ratings.Count();
+            stats.AverageGrade = sum / ratings.Count();
+            stats.MaxGrade = ratings.Max();
+            stats.MaxGrade = ratings.Min();
+            
 
-            return avg;
+            return stats; 
         }
-
-        public float GiveMaxRating()
-        {
-            return ratings.Max();
-        }
-
-        public float GiveMinRating()
-        {
-            return ratings.Min();
-        }
+    
     }
 }
