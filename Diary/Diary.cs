@@ -8,7 +8,7 @@ namespace Diary
     class Diary
     {
         // stan (zmienne - pola)
-        List<float> ratings;
+        List<float> ratings = new List<float>();
 
         // zachowania
         public void AddRating(float rating)
