@@ -22,13 +22,18 @@ namespace Diary
             {
                 Console.WriteLine("Podaj ocenę z zakresu 1 -10");
 
-                float rating = float.Parse(Console.ReadLine());
+                float rating;
+                bool result = float.TryParse(Console.ReadLine(), out rating);
 
                 if(rating == 11)
                 {
                     break;
                 }
-                diary.AddRating(rating);
+                if(result)
+                {
+                    diary.AddRating(rating);
+                }
+                
             }
             Console.WriteLine("Średnia Twoich ocen to: " + diary.CalculateAverage());
             Console.WriteLine("Najwyższa ocena to: " + diary.GiveMaxRating());
