@@ -7,6 +7,10 @@ namespace Diary
 {
     class Diary
     {
+        public Diary()
+        {
+            ratings = new List<float>(); // inicjalizacja pól
+        }
         // stan (zmienne - pola)
         List<float> ratings = new List<float>();
 

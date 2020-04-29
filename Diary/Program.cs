@@ -46,6 +46,8 @@ namespace Diary
             Console.WriteLine("Najwyższa ocena to: " + diary.GiveMaxRating());
             Console.WriteLine("Najniższa ocena to: " + diary.GiveMinRating());
             Console.ReadKey();
+
+            
         }
     }
 
