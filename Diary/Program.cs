@@ -20,7 +20,7 @@ namespace Diary
 
             for (; ;)
             {
-                Console.WriteLine("Podaj ocenę z zakresu 1 -10");
+                Console.WriteLine("Podaj ocenę z zakresu 1 - 10");
 
                 float rating;
                 bool result = float.TryParse(Console.ReadLine(), out rating);
@@ -31,7 +31,14 @@ namespace Diary
                 }
                 if(result)
                 {
+                    if(rating > 0 && rating <= 10)
+                    {
                     diary.AddRating(rating);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Niepoprawna liczba podaj liczbę z zakresy 1 - 10");
+                    }
                 }
                 
             }
